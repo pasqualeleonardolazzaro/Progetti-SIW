@@ -13,6 +13,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 
+//lascio le politiche di fetch di default e non inserisco cascade
+
 @Entity
 public class Allievo {
 	

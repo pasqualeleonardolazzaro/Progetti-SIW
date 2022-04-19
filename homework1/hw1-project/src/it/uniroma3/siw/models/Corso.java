@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
+//lascio le strategie di fetch di default e non necessito di cascade
+
 @Entity
 public class Corso {
 	
@@ -21,7 +23,7 @@ public class Corso {
 	private Date dataInizio;
 	private int durataInMesi;
 	
-	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+	@ManyToMany
 	private List<Allievo> allievi;
 	
 	@ManyToOne

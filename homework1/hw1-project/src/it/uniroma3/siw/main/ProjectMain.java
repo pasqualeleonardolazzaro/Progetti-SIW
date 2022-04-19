@@ -16,7 +16,4 @@ public class ProjectMain {
 		emf.close();
 	}
 	
-	//lascio le strategie di fatch standard, mentre per le cascade ho messo cascade persist e delete nella'associazione
-	//tra docente e corso in quanto non esiste un corso senza docente stesso ragionamento tra corso e allievi
-	
 }

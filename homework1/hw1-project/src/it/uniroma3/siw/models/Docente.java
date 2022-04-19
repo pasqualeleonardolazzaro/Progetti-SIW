@@ -5,18 +5,22 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+ 
 
+//modifico la politica di fetch da Lazy a Eager per corsi in quanto è lecito sapere i corsi che insegnano i docenti
+//e le cascade in quanto se elimino un docente elimino anche i suoi corsi
 
 @Entity
 public class Docente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int partitaIva;
+	private long partitaIva;
 	
 	
 	private String nome;
@@ -25,14 +29,14 @@ public class Docente {
 	private String luogoNascita;
 	
 	
-	@OneToMany( mappedBy = "docente", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+	@OneToMany( mappedBy = "docente", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
 	private List<Corso> corsi;
 
-	public int getPartitaIva() {
+	public long getPartitaIva() {
 		return partitaIva;
 	}
 
-	public void setPartitaIva(int partitaIva) {
+	public void setPartitaIva(long partitaIva) {
 		this.partitaIva = partitaIva;
 	}
 
