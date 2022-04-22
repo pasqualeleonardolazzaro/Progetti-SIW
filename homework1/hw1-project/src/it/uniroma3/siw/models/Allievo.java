@@ -19,8 +19,7 @@ import javax.persistence.ManyToOne;
 public class Allievo {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int matricola;
+	private long matricola;
 	
 	
 	private String nome;
@@ -37,11 +36,11 @@ public class Allievo {
 	@ManyToMany(mappedBy = "allievi")
 	private List<Corso> corsi; 
 
-	public int getMatricola() {
+	public long getMatricola() {
 		return matricola;
 	}
 
-	public void setMatricola(int matricola) {
+	public void setMatricola(long matricola) {
 		this.matricola = matricola;
 	}
 

@@ -19,7 +19,6 @@ import javax.persistence.OneToMany;
 public class Docente {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long partitaIva;
 	
 	
@@ -29,7 +28,7 @@ public class Docente {
 	private String luogoNascita;
 	
 	
-	@OneToMany( mappedBy = "docente", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+	@OneToMany( mappedBy = "docente", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST})
 	private List<Corso> corsi;
 
 	public long getPartitaIva() {

@@ -18,6 +18,8 @@ public class Corso {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	
 	private String nome;
 	
 	private Date dataInizio;

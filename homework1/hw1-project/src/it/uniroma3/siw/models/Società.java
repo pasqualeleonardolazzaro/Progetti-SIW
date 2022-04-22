@@ -15,7 +15,13 @@ public class Società {
 	
 	
 	private String ragioneSociale;
-	private String indirizzoSede;
+	private String via;		
+	private String numeroCivico;
+	private String comune;
+	private String cap;
+	private String provincia;
+	
+	private long numeroDiTelefono;
 	
 	
 	public long getId() {
@@ -30,12 +36,46 @@ public class Società {
 	public void setRagioneSociale(String ragioneSociale) {
 		this.ragioneSociale = ragioneSociale;
 	}
-	public String getIndirizzoSede() {
-		return indirizzoSede;
+	public long getNumeroDiTelefono() {
+		return numeroDiTelefono;
 	}
-	public void setIndirizzoSede(String indirizzoSede) {
-		this.indirizzoSede = indirizzoSede;
+	public void setNumeroDiTelefono(long numeroDiTelefono) {
+		this.numeroDiTelefono = numeroDiTelefono;
 	}
+	public String getVia() {
+		return via;
+	}
+	public void setVia(String via) {
+		this.via = via;
+	}
+	public String getNumeroCivico() {
+		return numeroCivico;
+	}
+	public void setNumeroCivico(String numeroCivico) {
+		this.numeroCivico = numeroCivico;
+	}
+	public String getComune() {
+		return comune;
+	}
+	public void setComune(String comune) {
+		this.comune = comune;
+	}
+	public String getCap() {
+		return cap;
+	}
+	public void setCap(String cap) {
+		this.cap = cap;
+	}
+	public String getProvincia() {
+		return provincia;
+	}
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
+	}
+	
+	
+	
+	
 	
 	
 
